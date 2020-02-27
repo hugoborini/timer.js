@@ -3,22 +3,46 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  overflow-x: hidden;
   height: 100vh;
 }
 
+@mixin mobile {
+  @media (max-width: 645px) {
+    @content;
+  }
+}
+@mixin mobile-small {
+  @media (max-width: 418px) {
+    @content;
+  }
+}
 .timer {
   display: flex;
   font-size: 100px;
   font-family: "Poppins";
   letter-spacing: 25px;
+  @include mobile {
+    font-size: 50px;
+    letter-spacing: 12px;
+  }
+  @include mobile-small {
+    font-size: 25px;
+  }
 }
 
 .button {
   display: flex;
-  justify-content: space-between;
-  width: 40vw;
+  justify-content: space-around;
+  width: 100vw;
   font-size: 50px;
   font-family: "Poppins";
+  @include mobile {
+    font-size: 25px;
+  }
+  @include mobile-small {
+    font-size: 12px;
+  }
   .button__start {
     display: flex;
     background-color: green;
@@ -29,6 +53,13 @@ body {
     border-radius: 20%;
     transition: 0.5s;
     height: 100px;
+    @include mobile {
+      width: 100px;
+    }
+    @include mobile-small {
+      width: 50px;
+      height: 50px;
+    }
   }
   .button__start:hover {
     transform: translateY(-50px);
@@ -46,6 +77,13 @@ body {
     border-radius: 20%;
     transition: 0.5s;
     height: 100px;
+    @include mobile {
+      width: 100px;
+    }
+    @include mobile-small {
+      width: 50px;
+      height: 50px;
+    }
   }
   .button__stop:hover {
     transform: translateY(-50px);
@@ -63,6 +101,13 @@ body {
     border-radius: 20%;
     transition: 0.5s;
     height: 100px;
+    @include mobile {
+      width: 100px;
+    }
+    @include mobile-small {
+      width: 50px;
+      height: 50px;
+    }
   }
   .button__reset:hover {
     transform: translateY(-50px);
