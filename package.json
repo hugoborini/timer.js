@@ -4,10 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
- "dev": "parcel src/index.html",
- "build": "parcel build src/index.html",
-
-
+    "dev": "parcel src/index.html",
+    "build": "parcel build src/index.html",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -22,6 +20,7 @@
   },
   "homepage": "https://github.com/hugoborini/timer.js#readme",
   "devDependencies": {
-    "parcel-bundler": "^1.12.4"
+    "parcel-bundler": "^1.12.4",
+    "sass": "^1.26.1"
   }
 }
